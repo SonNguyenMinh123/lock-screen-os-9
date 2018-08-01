@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              android:background="@android:color/white"
+              android:orientation="vertical"
+              android:padding="20.0dip">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true">
+
+
+        <com.abc.xyz.views.widgets.TextviewIPBold
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:text="@string/w_setbg"
+            android:textAppearance="?android:textAppearanceMedium"
+            android:textColor="#ff272727"/>
+
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1.0dip"
+        android:layout_marginTop="5.0dip"
+        android:background="@color/line"/>
+
+    <com.abc.xyz.views.widgets.ButtonIPBold
+        android:id="@+id/btn_layout_setwallpaper_gallery"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16.0dip"
+        android:text="@string/w_choose_wall"/>
+
+    <com.abc.xyz.views.widgets.ButtonIPBold
+        android:id="@+id/btn_layout_setwallpaper_new"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/w_choosenewwall"/>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1.0dip"
+        android:layout_marginBottom="5.0dip"
+        android:layout_marginTop="15.0dip"
+        android:background="@color/line"/>
+
+    <com.abc.xyz.views.widgets.ButtonIPBold
+        android:id="@+id/btn_layout_setwallpaper_cancel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/w_cancel"/>
+</LinearLayout>

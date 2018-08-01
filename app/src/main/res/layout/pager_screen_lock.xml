@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:id="@+id/lnl_lock_screen"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_horizontal"
+        android:padding="5dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_marginTop="@dimen/_30sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <com.abc.xyz.views.widgets.TextviewIPBold_ChangeColor
+                    android:layout_centerInParent="true"
+                    android:id="@+id/tv_activity_screen_lock_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:shadowColor="#1a1717"
+                    android:text="12:00"
+                    android:textColor="#f9fbe7"
+                    android:textSize="@dimen/_70sdp" />
+                <com.abc.xyz.views.widgets.TextviewIPBold_ChangeColor
+                    android:paddingTop="@dimen/_16sdp"
+                    android:layout_toRightOf="@+id/tv_activity_screen_lock_time"
+                    android:id="@+id/tv_activity_screen_lock_time_am"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/_5sdp"
+                    android:shadowColor="#1a1717"
+                    android:shadowDx="1"
+                    android:shadowDy="0"
+                    android:shadowRadius="5"
+                    android:text="AM"
+                    android:textColor="#f9fbe7"
+                    android:textSize="@dimen/_20sdp" />
+            </RelativeLayout>
+            <com.abc.xyz.views.widgets.TextviewIPBold_ChangeColor
+                android:id="@+id/tv_activity_screen_lock_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:shadowColor="#1a1717"
+                android:shadowDx="1"
+                android:shadowDy="0"
+                android:shadowRadius="2"
+                android:text="Thứ 4, 22 tháng 3"
+                android:textColor="#f9fbe7"
+                android:textSize="@dimen/_30sdp" />
+
+            <ListView
+                android:visibility="gone"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:scrollbars="none"
+                android:divider="@null"
+                android:dividerHeight="0dp"
+                android:id="@+id/lv_pager_lock_message"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="@dimen/_80sdp"
+                ></ListView>
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <ImageView
+        android:scaleType="centerCrop"
+        android:id="@+id/iv_lock_screen_pager_bg_blur"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/bg_blur"
+        android:visibility="visible"/>
+    <com.abc.xyz.views.widgets.shimmertextview.ShimmerTextView
+        android:id="@+id/tv_activity_screen_lock_slide"
+        android:layout_marginBottom="@dimen/_50sdp"
+        android:gravity="center_horizontal"
+        android:text="Press home to unlock"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:textSize="@dimen/_24sdp"
+        android:scaleY="1.1"
+        android:textColor="#ff444444"/>
+    <com.sothree.slidinguppanel.SlidingUpPanelLayout
+        xmlns:sothree="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        sothree:umanoPanelHeight="1dp"
+        android:gravity="bottom"
+        sothree:umanoClipPanel="false"
+
+        android:id="@+id/slide_pager_lock_bot"
+
+        sothree:umanoDragView="@+id/dragView"
+        sothree:umanoFadeColor="@android:color/transparent"
+        sothree:umanoParalaxOffset="1dp"
+        sothree:umanoShadowHeight="0dp">
+
+        <!-- MAIN CONTENT -->
+        <RelativeLayout
+            android:id="@+id/slide_pager_lock_bot_main"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clickable="true"
+            android:orientation="vertical">
+
+        </RelativeLayout>
+
+        <!-- SLIDING LAYOUT -->
+        <RelativeLayout
+            android:visibility="gone"
+            android:id="@+id/dragView"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_350sdp"
+            android:clickable="true"
+            android:focusable="false">
+
+            <LinearLayout
+                android:id="@+id/slide_pager_lock_bot_slide"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <include
+                    layout="@layout/item_popup_control_"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_370sdp"
+                    ></include>
+            </LinearLayout>
+
+
+
+        </RelativeLayout>
+    </com.sothree.slidinguppanel.SlidingUpPanelLayout>
+
+    <LinearLayout
+        android:layout_alignParentBottom="true"
+        android:id="@+id/lnl_pager_screen_lock_touch"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_70sdp"
+        android:orientation="vertical"></LinearLayout>
+
+
+</RelativeLayout>

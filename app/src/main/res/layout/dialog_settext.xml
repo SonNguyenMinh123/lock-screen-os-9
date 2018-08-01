@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_gravity="center"
+              android:background="#ffffffff"
+              android:orientation="vertical"
+              android:padding="10.0dip">
+
+    <com.abc.xyz.views.widgets.TextviewIPBold
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:text="\t\t\tEnter Your Text Here\t\t\t"
+        android:textColor="#000000"
+        android:textSize="18sp"/>
+
+    <EditText
+        android:id="@+id/edt_dialog_settext"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10.0dip"
+        android:ems="10"
+        android:singleLine="true"
+        android:textColor="@android:color/background_dark"/>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10.0dip"
+        android:orientation="horizontal">
+
+
+        <com.abc.xyz.views.widgets.ButtonIPBold
+            android:id="@+id/btn_dialog_text_cancel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Cancel"/>
+
+        <com.abc.xyz.views.widgets.ButtonIPBold
+            android:id="@+id/btn_dialog_text_ok"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Ok"/>
+    </LinearLayout>
+</LinearLayout>

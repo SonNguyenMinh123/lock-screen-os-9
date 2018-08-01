@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:background="#f0eff5"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="50.0dip"
+        android:background="@color/titlename">
+
+        <com.abcd.defgh.views.MyTextViewBold
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="10.0dip"
+            android:text="@string/w_wallpaper"
+            android:textColor="@android:color/background_dark"
+            android:textSize="20.0dip"
+            android:textStyle="bold"/>
+    </RelativeLayout>
+
+    <GridView
+        android:layout_height="match_parent"
+        android:numColumns="2"
+        android:layout_width="match_parent"
+        android:id="@+id/gv_choose_image"
+        android:layout_gravity="center_horizontal" />
+</LinearLayout>

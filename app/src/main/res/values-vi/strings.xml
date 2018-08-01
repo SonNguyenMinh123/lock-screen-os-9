@@ -1,0 +1,66 @@
+<resources>
+    <string name="app_name">Màn Hình Khóa</string>
+    <string name="str_preview">Xem trước</string>
+    <string name="enable_screen_lock">Mở/Tắt Khóa màn hình</string>
+    <string name="str_setpin">Đặt mã PIN</string>
+    <string name="str_change_pin">Thay đổi mã PIN</string>
+    <string name="str_wall_paper">Hình Nền</string>
+    <string name="str_title_lock_screen">nhấp để thay đổi hình nền</string>
+    <string name="str_date_format">Định dạng thời gian</string>
+    <string name="str_title_date_format">Chọn định dạng hiển thị 12h hoặc 24h</string>
+    <string name="str_settext_slide">Văn bản màn hình khóa</string>
+    <string name="str_lock_camera">Bật/Tắt Camera (IOS 9)</string>
+    <string name="str_title_lock_camera">Hiển thị camera trên màn hình khóa</string>
+    <string name="str_lock_sound">Bật/Tắt Âm thanh</string>
+    <string name="str_vibration">Bật/Tắt Rung</string>
+    <string name="str_share"> Chia sẻ ứng dụng với bạn bè</string>
+    <string name="str_title_share">Chia sẻ nó với bạn bè của bạn</string>
+    <string name="str_rate">Đánh giá ứng dụng</string>
+    <string name="wt_setting">Cài đặt thời tiết</string>
+    <string name="str_color_txt">Đổi màu chữ</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="later">Để sau</string>
+    <string name="yes">Đồng ý</string>
+    <string name="title_activity_set_pass_code">SetPassCodeActivity</string>
+    <string name="title_activity_question_passcode">QuestionPasscodeActivity</string>
+    <string name="title_activity_question_changepin">QuestionChangepinActivity</string>
+    <string name="title_activity_wallpaper">WallpaperActivity</string>
+    <string name="title_activity_set_cpasscode">SetCPasscodeActivity</string>
+    <string name="title_activity_lock_screen">LockScreenActivity</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="title_activity_select_wallpaper">SelectWallpaperActivity</string>
+    <string name="w_setbg">Cài đặt hình nền</string>
+    <string name="w_choose_wall"> Chọn hình nền từ Gallery</string>
+    <string name="w_choosenewwall">Chọn hình nền IP</string>
+    <string name="w_cancel">Hủy</string>
+    <string name="w_ok">Đồng ý</string>
+    <string name="w_wallpaper">Hình Nền</string>
+    <string name="p_enterpasscode">Nhập mã PIN</string>
+    <string name="p_clear">Xóa</string>
+    <string name="p_confirmpass">Xác nhận mã PIN</string>
+    <string name="p_setwallpaper">Đặt hình nền</string>
+    <string name="p_passcurent">Mã PIN hiện tại</string>
+    <string name="loading">--</string>
+    <string name="temp_f">Fahrenheit (°F)</string>
+    <string name="temp_c">Celcius (°C)</string>
+    <string name="emergency">Khẩn cấp</string>
+    <string name="alert_location">Bạn cần chọn thành phố của bạn trong "Cài đặt thời tiết" khi lần đầu tiên mở chức năng thời tiết!!</string>
+    <string name="toast_removepasscode">Mã PIN đã xóa</string>
+    <string name="toast_network">Không thể kết nối Internet</string>
+    <string name="toast_locationservice">Bạn cần mở dịch vụ GPS|Location trong điện thoại của bạn!</string>
+    <string name="turn_of_lockscreen">Bạn có muốn vô hiệu hóa màn hình khóa trong lần mở khóa sắp tới?</string>
+    <string name="str_settings">Cài đặt</string>
+    <string name="lock_screen_ios9_for_android">Phím khóa màn hình cho Android</string>
+    <string name="rate">Hãy ủng hộ ứng dụng Việt 5 sao, xin cảm ơn ^^!</string>
+    <string name="please">Bình Chọn!</string>
+    <!---->
+    <string name="divider_cont_desc">Divider</string>
+    <string name="enter_password">Nhập mật khẩu</string>
+
+    <string name="toash_password_no_correct">Mật khẩu không đúng</string>
+    <string name="lock_ios9">Màn Hình Khóa IOS 9</string>
+    <string name="lock_ios10">Màn Hình Khóa IOS 10</string>
+</resources>

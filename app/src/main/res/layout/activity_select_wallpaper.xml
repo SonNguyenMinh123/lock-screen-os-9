@@ -1,0 +1,66 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".screens.WallpaperSelectionActivity">
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vpg_activity_selectwallpaper"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+
+    <TextView
+        android:id="@+id/txv_activity_selectwallpaper_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30.0dip"
+        android:text="10:43"
+        android:textColor="#ffffffff"
+        android:textSize="@dimen/_65sdp" />
+
+    <TextView
+        android:id="@+id/txv_activity_selectwallpaper_day"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txv_activity_selectwallpaper_time"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:text="Medium Text"
+        android:textColor="#ffffffff"
+        android:textSize="@dimen/_16sdp" />
+
+    <TextView
+        android:id="@+id/txv_activity_selectwallpaper_am"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/txv_activity_selectwallpaper_time"
+        android:layout_alignBottom="@id/txv_activity_selectwallpaper_time"
+        android:layout_marginLeft="5.0dip"
+        android:layout_toRightOf="@id/txv_activity_selectwallpaper_time"
+        android:textAppearance="?android:textAppearanceSmall"
+        android:textColor="#ffffffff" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <com.abc.xyz.views.widgets.ButtonIPBold
+            android:id="@+id/btn_activity_selectwallpaper_cancel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/w_cancel" />
+
+        <com.abc.xyz.views.widgets.ButtonIPBold
+            android:id="@+id/btn_activity_selectwallpaper_set"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/p_setwallpaper" />
+    </LinearLayout>
+
+</RelativeLayout>

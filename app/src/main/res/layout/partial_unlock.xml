@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.abc.xyz.views.partials.UnlockLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:wheel="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#00ffffff">
+
+    <com.sothree.slidinguppanel.SlidingUpPanelLayout
+        android:id="@+id/slu_layout_unlock"
+        xmlns:sothree="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="bottom"
+        sothree:umanoDragView="@+id/dragView"
+        sothree:umanoFadeColor="@android:color/transparent"
+        sothree:umanoOverlay="true"
+        sothree:umanoPanelHeight="50dp"
+        sothree:umanoParalaxOffset="0dp"
+        sothree:umanoShadowHeight="0dp">
+
+        <RelativeLayout
+            android:id="@+id/rll_layout_unlock__rootview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:id="@+id/frl_layout_unlock__center_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@+id/stv_layout_unlock"
+                android:layout_alignTop="@+id/lnl_layout_unlock_weather"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="40dp">
+
+                <ListView
+                    android:id="@+id/slv_layout_unlock"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:divider="#c0ffffff"
+                    android:dividerHeight="1px"
+                    android:listSelector="#8effffff"
+                    />
+            </FrameLayout>
+
+            <LinearLayout
+                android:id="@+id/top"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:orientation="horizontal">
+
+                <com.abc.xyz.views.widgets.TextviewIPBold_ChangeColor
+                    android:id="@+id/txv_layout_unlock_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="30dip"
+                    android:textColor="#ffffffff"
+                    android:textSize="@dimen/_70sdp"/>
+
+                <com.abc.xyz.views.widgets.TextviewIPBold_ChangeColor
+                    android:id="@+id/txv_layout_unlock_am"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5.0dip"
+                    android:textAppearance="?android:textAppearanceSmall"
+                    android:textColor="#ffffffff"/>
+
+            </LinearLayout>
+
+            <com.abc.xyz.views.widgets.TextviewIPBold_ChangeColor
+                android:id="@+id/txv_layout_unlock_day"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/top"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="-5dp"
+                android:gravity="center"
+                android:textColor="#ffffffff"
+                android:textSize="@dimen/_22sdp"/>
+
+            <LinearLayout
+                android:id="@+id/lnl_layout_unlock_weather"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/txv_layout_unlock_day"
+                android:orientation="vertical"
+                android:paddingLeft="90dp">
+
+            </LinearLayout>
+
+            <com.abc.xyz.views.widgets.shimmertextview.ShimmerTextView
+                android:id="@+id/stv_layout_unlock"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="55.0dip"
+                android:text="> Slide to Unlock"
+                android:textColor="#ff444444"
+                android:textSize="@dimen/_27sdp"/>
+
+            <ImageView
+                android:id="@+id/img_layout_unlock_slideup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:alpha="0.5"
+                android:padding="15dp"
+                android:src="@drawable/ic_slideup"/>
+        </RelativeLayout>
+
+        <include
+            layout="@layout/partial_slideup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </com.sothree.slidinguppanel.SlidingUpPanelLayout>
+
+</com.abc.xyz.views.partials.UnlockLayout>

@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.abc.xyz.views.partials.Weatherlayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="match_parent"
+
+                                                                android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/lnl_layout_weather_temp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:orientation="horizontal"
+        android:layout_marginRight="5dp"
+        android:padding="5dp">
+
+        <com.abc.xyz.views.widgets.TextviewIPBold_ChangeColor
+            android:id="@+id/todayTempTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="@string/loading"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"/>
+
+        <com.abc.xyz.views.widgets.TextviewIPBold_ChangeColor
+            android:id="@+id/todayIconImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/todaySummaryTextView"
+            android:layout_centerHorizontal="true"
+            android:textColor="@android:color/white"
+            android:layout_gravity="center"
+            android:adjustViewBounds="true"
+            android:padding="5dp"
+            android:textSize="40sp"
+            />
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/lnl_layout_weather_location"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="5dp"
+        android:orientation="vertical">
+
+
+        <com.abc.xyz.views.widgets.TextviewIPBold_ChangeColor
+            android:id="@+id/locationTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/todayTimeDateTextView"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="right"
+            android:padding="5dp"
+            android:text="@string/loading"
+            android:textColor="@android:color/white"/>
+
+        <com.abc.xyz.views.widgets.TextviewIPBold_ChangeColor
+            android:id="@+id/todaySummaryTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/locationTextView"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:paddingTop="5dp"
+            android:text="@string/loading"
+            android:textColor="@android:color/white"
+            android:visibility="gone"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:orientation="horizontal"
+
+            android:padding="5dp">
+
+            <com.abc.xyz.views.widgets.TextviewIPBold_ChangeColor
+                android:id="@+id/todayHumidityTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/loading"
+                android:textColor="@android:color/white"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:orientation="horizontal"
+            android:layout_marginRight="5dp"
+            android:padding="5dp">
+
+
+            <com.abc.xyz.views.widgets.TextviewIPBold_ChangeColor
+                android:id="@+id/todayPrecipTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/loading"
+                android:textColor="@android:color/white"/>
+        </LinearLayout>
+
+
+        <ImageView
+            android:id="@+id/centerImageView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:contentDescription="@string/divider_cont_desc"
+            android:src="@android:color/white"/>
+
+
+        <GridView
+            android:id="@+id/forecastGridView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/centerImageView"
+            android:gravity="center_horizontal"
+            android:horizontalSpacing="5dp"
+            android:numColumns="5"
+            android:paddingBottom="5dp"
+            android:textAlignment="center"/>
+
+    </LinearLayout>
+
+
+</com.abc.xyz.views.partials.Weatherlayout>

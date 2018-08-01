@@ -1,0 +1,1 @@
+include ':slidinguppanel', ':libQuickActionBar', ':app', ':sweetdialog'

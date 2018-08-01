@@ -1,0 +1,871 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:shSwitch="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/lnl_activity_menu_setting__header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="5dp">
+
+        <com.abc.xyz.views.widgets.TextviewIPBold
+            android:id="@+id/text_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/background_light"
+            android:gravity="center"
+            android:text="@string/str_settings"
+            android:textColor="@android:color/background_dark"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <com.abc.xyz.views.widgets.TextviewIPBold
+            android:id="@+id/text_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/background_light"
+            android:gravity="center"
+            android:text="@string/lock_screen_ios9_for_android"
+            android:textColor="@color/common_signin_btn_light_text_default"
+            android:textSize="13sp"
+            android:textStyle="bold"/>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1.0dip"
+            android:background="@color/line" />
+    </LinearLayout>
+
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lnl_activity_menu_setting__header">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical"
+            android:weightSum="1">
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/_26sdp"
+                android:background="@color/titlename"></RelativeLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1.0dip"
+                android:background="@color/line" />
+
+            <RelativeLayout
+                android:id="@+id/rll_activity_menu_setting_preview"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_pressed_listitem">
+
+                <ImageView
+                    android:id="@+id/img_1"
+                    android:layout_width="@dimen/_30sdp"
+                    android:padding="@dimen/_2sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:src="@drawable/ic_preview" />
+
+                <com.abc.xyz.views.widgets.TextviewIPBold
+                    android:id="@+id/txv_activity_menu_setting_preview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10.0dip"
+                    android:layout_toRightOf="@id/img_1"
+                    android:paddingBottom="11dp"
+                    android:paddingTop="11dp"
+                    android:text="@string/str_preview"
+                    android:textColor="#000000"
+                    android:textSize="@dimen/_13sdp" />
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:src="@drawable/ic_chevron_right" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1.0dip"
+                    android:layout_alignLeft="@+id/txv_activity_menu_setting_preview"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/line" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:gravity="center"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/_35sdp"
+                android:background="@color/titlename"
+                android:layout_weight="0.23">
+                <RelativeLayout
+                    android:id="@+id/layout_select_os9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+
+                    <com.abc.xyz.views.widgets.RadioButtonIPBold
+                        android:id="@+id/radioButton_ios9"
+                        android:layout_width="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="@string/lock_ios9"
+                        android:textColor="#ff0a0906"
+                        android:textSize="@dimen/_11sdp" />
+                </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/layout_select_os10"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_toRightOf="@+id/layout_select_os9"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+                <com.abc.xyz.views.widgets.RadioButtonIPBold
+                    android:id="@+id/radioButton_ios10"
+                    android:layout_width="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="@string/lock_ios10"
+                    android:textColor="#ff0a0906"
+                    android:textSize="@dimen/_11sdp"/>
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rll_activity_menu_setting_screenlock"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_pressed_listitem"
+                android:paddingTop="5.0dip">
+
+                <ImageView
+                    android:id="@+id/img_2"
+                    android:layout_width="@dimen/_30sdp"
+                    android:padding="@dimen/_2sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:src="@drawable/ic_enable" />
+
+                <com.abc.xyz.views.widgets.TextviewIPBold
+                    android:id="@+id/txv_activity_menu_setting_screenlock"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10.0dip"
+                    android:layout_toRightOf="@id/img_2"
+                    android:paddingBottom="11dp"
+                    android:paddingTop="11dp"
+                    android:text="@string/enable_screen_lock"
+                    android:textColor="#000000"
+                    android:textSize="@dimen/_13sdp" />
+
+
+                <com.sevenheaven.iosswitch.ShSwitchView
+                    android:id="@+id/swc_activity_menu_setting_screenlock"
+                    android:layout_width="@dimen/_55sdp"
+                    android:layout_height="@dimen/_35sdp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="5dp"
+                    android:checked="true"
+                    android:padding="5dp"
+                    shSwitch:shadowSpace="7dip"
+                    shSwitch:tintColor="#ff62cc2f" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1.0dip"
+                    android:layout_alignLeft="@+id/txv_activity_menu_setting_screenlock"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/line" />
+
+            </RelativeLayout>
+
+            <!--   <View
+                   android:layout_width="fill_parent"
+                   android:layout_height="1.0dip"
+                   android:background="#9B9B9B"/>-->
+
+
+            <RelativeLayout
+                android:id="@+id/rll_activity_menu_setting_setpin"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_pressed_listitem"
+                android:paddingTop="5.0dip">
+
+                <ImageView
+                    android:id="@+id/img_4"
+                    android:layout_width="@dimen/_30sdp"
+                    android:padding="@dimen/_2sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:src="@drawable/ic_password" />
+
+                <com.abc.xyz.views.widgets.TextviewIPBold
+                    android:id="@+id/txt_setting_set_pass"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10.0dip"
+                    android:layout_toRightOf="@id/img_4"
+                    android:paddingBottom="11dp"
+                    android:paddingTop="11dp"
+                    android:text="@string/str_setpin"
+                    android:textColor="#000000"
+                    android:textSize="@dimen/_13sdp" />
+
+                <com.sevenheaven.iosswitch.ShSwitchView
+                    android:id="@+id/swc_activity_menu_setting_setpin"
+                    android:layout_width="@dimen/_55sdp"
+                    android:layout_height="@dimen/_35sdp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="5dp"
+                    android:checked="true"
+                    android:padding="5dp"
+                    shSwitch:shadowSpace="7dip"
+                    shSwitch:tintColor="#ff62cc2f"/>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1.0dip"
+                    android:layout_alignLeft="@+id/txt_setting_set_pass"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/line" />
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/rll_activity_menu_setting_changepin"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_pressed_listitem"
+                android:paddingTop="5.0dip">
+
+                <ImageView
+                    android:id="@+id/img_5"
+                    android:layout_width="@dimen/_30sdp"
+                    android:padding="@dimen/_2sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:src="@drawable/ic_changepin" />
+
+                <com.abc.xyz.views.widgets.TextviewIPBold
+                    android:id="@+id/txv_activity_menu_setting_changepin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10.0dip"
+                    android:layout_toRightOf="@id/img_5"
+                    android:paddingBottom="11dp"
+                    android:paddingTop="11dp"
+                    android:text="@string/str_change_pin"
+                    android:textColor="#000000"
+                    android:textSize="@dimen/_13sdp" />
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:src="@drawable/ic_chevron_right" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1.0dip"
+                    android:layout_alignLeft="@+id/txv_activity_menu_setting_changepin"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/line" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rll_activity_menu_setting_wallpaper"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_pressed_listitem"
+                android:paddingTop="5dp">
+
+                <ImageView
+                    android:id="@+id/img_3"
+                    android:layout_width="@dimen/_30sdp"
+                    android:padding="@dimen/_2sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:src="@drawable/ic_changewall" />
+
+                <LinearLayout
+                    android:id="@+id/lnl_activity_menu_setting_bg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10.0dip"
+                    android:layout_toRightOf="@id/img_3"
+                    android:orientation="vertical"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="5dp">
+
+                    <com.abc.xyz.views.widgets.TextviewIPBold
+                        android:id="@+id/txv_activity_menu_setting_changebg"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/str_wall_paper"
+                        android:textColor="#000000"
+                        android:textSize="@dimen/_13sdp" />
+
+                    <com.abc.xyz.views.widgets.TextviewIPBold
+                        android:id="@+id/txv_activity_menu_setting_changebg2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/txv_activity_menu_setting_changebg"
+                        android:layout_centerVertical="true"
+                        android:layout_marginTop="3dp"
+                        android:text="@string/str_title_lock_screen"
+                        android:textColor="#828282"
+                        android:textSize="@dimen/_11sdp"  />
+                </LinearLayout>
+
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:src="@drawable/ic_chevron_right" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1.0dip"
+                    android:layout_alignLeft="@+id/lnl_activity_menu_setting_bg"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/line" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rll_activity_menu_setting_weather"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_pressed_listitem"
+                android:paddingTop="5.0dip">
+
+                <ImageView
+                    android:id="@+id/img_30"
+                    android:layout_width="@dimen/_30sdp"
+                    android:padding="@dimen/_2sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:src="@drawable/ic_weather" />
+
+                <com.abc.xyz.views.widgets.TextviewIPBold
+                    android:id="@+id/txv_activity_menu_setting_weather"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10.0dip"
+                    android:layout_toRightOf="@+id/img_30"
+                    android:paddingBottom="11dp"
+                    android:paddingTop="11dp"
+                    android:text="@string/wt_setting"
+                    android:textColor="#000000"
+                    android:textSize="@dimen/_13sdp" />
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:src="@drawable/ic_chevron_right" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1.0dip"
+                android:background="@color/line" />
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/_26sdp"
+                android:background="@color/titlename">
+
+                <!--             <com.lockscreen.lockscreensdk.widgets.views.TextviewIos
+                                 android:layout_width="wrap_content"
+                                 android:layout_height="wrap_content"
+                                 android:layout_centerVertical="true"
+                                 android:layout_marginLeft="10.0dip"
+                                 android:text="VISUAL APPEARANCE"
+                                 android:textColor="#ffffff"
+                                 android:textSize="20.0dip"
+                                 android:textStyle="bold"/>-->
+            </RelativeLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1.0dip"
+                android:background="@color/line" />
+
+
+            <RelativeLayout
+                android:id="@+id/rll_activity_menu_setting_dateformat"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_pressed_listitem">
+
+                <ImageView
+                    android:id="@+id/img_8"
+                    android:layout_width="@dimen/_30sdp"
+                    android:padding="@dimen/_2sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:src="@drawable/ic_dateformat" />
+
+                <LinearLayout
+                    android:id="@+id/lnl_activity_menu_setting_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10.0dip"
+                    android:layout_toRightOf="@id/img_8"
+                    android:orientation="vertical"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="5dp">
+
+                    <com.abc.xyz.views.widgets.TextviewIPBold
+                        android:id="@+id/txv_activity_menu_setting_date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/str_date_format"
+                        android:textColor="#000000"
+                        android:textSize="@dimen/_13sdp" />
+
+                    <com.abc.xyz.views.widgets.TextviewIPBold
+                        android:id="@+id/txv_activity_menu_setting_date2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:text="@string/str_title_date_format"
+                        android:textColor="#828282"
+                        android:textSize="@dimen/_11sdp" />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:src="@drawable/ic_chevron_right" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1.0dip"
+                    android:layout_alignLeft="@+id/lnl_activity_menu_setting_date"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/line" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rll_activity_menu_setting_settext"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_pressed_listitem"
+                android:paddingTop="5.0dip">
+
+                <ImageView
+                    android:id="@+id/img_6"
+                    android:layout_width="@dimen/_30sdp"
+                    android:padding="@dimen/_2sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:src="@drawable/ic_settextslide" />
+
+                <com.abc.xyz.views.widgets.TextviewIPBold
+                    android:id="@+id/txv_activity_menu_setting_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10.0dip"
+                    android:layout_toRightOf="@id/img_6"
+                    android:paddingBottom="11dp"
+                    android:paddingTop="11dp"
+                    android:text="@string/str_settext_slide"
+                    android:textColor="#000000"
+                    android:textSize="@dimen/_13sdp" />
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:src="@drawable/ic_chevron_right" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1.0dip"
+                    android:layout_alignLeft="@+id/txv_activity_menu_setting_text"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/line" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rll_activity_menu_setting__text_color"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_pressed_listitem"
+                android:paddingTop="5.0dip">
+
+                <ImageView
+                    android:id="@+id/img_13"
+                    android:layout_width="@dimen/_30sdp"
+                    android:padding="@dimen/_2sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:src="@drawable/ic_color" />
+
+                <com.abc.xyz.views.widgets.TextviewIPBold
+                    android:id="@+id/txv_activity_text_color"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10.0dip"
+                    android:layout_toRightOf="@id/img_13"
+                    android:paddingBottom="11dp"
+                    android:paddingTop="11dp"
+                    android:text="@string/str_color_txt"
+                    android:textColor="#000000"
+                    android:textSize="@dimen/_13sdp" />
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:src="@drawable/ic_chevron_right" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1.0dip"
+                    android:layout_alignLeft="@+id/txv_activity_text_color"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/line" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rll_activity_menu_setting_camera"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_pressed_listitem">
+
+                <ImageView
+                    android:id="@+id/img_12"
+                    android:layout_width="@dimen/_30sdp"
+                    android:padding="@dimen/_2sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:src="@drawable/ic_camera_lock" />
+
+                <LinearLayout
+                    android:id="@+id/lnl_activity_menu_setting_camera"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10.0dip"
+                    android:layout_toRightOf="@id/img_12"
+                    android:orientation="vertical"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="5dp">
+
+                    <com.abc.xyz.views.widgets.TextviewIPBold
+                        android:id="@+id/txv_activity_menu_setting_camera"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/str_lock_camera"
+                        android:textColor="#000000"
+                        android:textSize="@dimen/_13sdp" />
+
+                    <com.abc.xyz.views.widgets.TextviewIPBold
+                        android:id="@+id/txv_activity_menu_setting_camera2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:text="@string/str_title_lock_camera"
+                        android:textColor="#828282"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <com.sevenheaven.iosswitch.ShSwitchView
+                    android:id="@+id/swc_activity_menu_setting_camera"
+                    android:layout_width="@dimen/_55sdp"
+                    android:layout_height="@dimen/_35sdp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="5dp"
+                    android:checked="true"
+                    android:padding="5dp"
+                    shSwitch:shadowSpace="7dip"
+                    shSwitch:tintColor="#ff62cc2f" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1.0dip"
+                    android:layout_alignLeft="@+id/lnl_activity_menu_setting_camera"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/line" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rll_activity_menu_setting_sound"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_pressed_listitem"
+                android:paddingTop="5.0dip">
+
+                <ImageView
+                    android:id="@+id/img_9"
+                    android:layout_width="@dimen/_30sdp"
+                    android:padding="@dimen/_2sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:src="@drawable/ic_locksound" />
+
+                <com.abc.xyz.views.widgets.TextviewIPBold
+                    android:id="@+id/txv_activity_menu_setting_sound"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10.0dip"
+                    android:layout_toRightOf="@id/img_9"
+                    android:paddingBottom="11dp"
+                    android:paddingTop="11dp"
+                    android:text="@string/str_lock_sound"
+                    android:textColor="#000000"
+                    android:textSize="@dimen/_13sdp" />
+
+
+                <com.sevenheaven.iosswitch.ShSwitchView
+                    android:id="@+id/swc_activity_menu_setting_sound"
+                    android:layout_width="@dimen/_55sdp"
+                    android:layout_height="@dimen/_35sdp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="5dp"
+                    android:checked="true"
+                    android:padding="5dp"
+                    shSwitch:shadowSpace="7dip"
+                    shSwitch:tintColor="#ff62cc2f" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1.0dip"
+                    android:layout_alignLeft="@+id/txv_activity_menu_setting_sound"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/line" />
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/rll_activity_menu_setting_vibration"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_pressed_listitem"
+                android:paddingTop="8.0dip">
+
+                <ImageView
+                    android:id="@+id/img_10"
+                    android:layout_width="@dimen/_30sdp"
+                    android:padding="@dimen/_2sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:src="@drawable/ic_vibration" />
+
+                <com.abc.xyz.views.widgets.TextviewIPBold
+                    android:id="@+id/txv_activity_menu_setting_vibration"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10.0dip"
+                    android:layout_toRightOf="@id/img_10"
+                    android:paddingBottom="11dp"
+                    android:paddingTop="11dp"
+                    android:text="@string/str_vibration"
+                    android:textColor="#000000"
+                    android:textSize="@dimen/_13sdp" />
+
+                <com.sevenheaven.iosswitch.ShSwitchView
+                    android:id="@+id/swc_activity_menu_setting_vibration"
+                    android:layout_width="@dimen/_55sdp"
+                    android:layout_height="@dimen/_35sdp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="5dp"
+                    android:checked="true"
+                    android:padding="5dp"
+                    shSwitch:shadowSpace="7dip"
+                    shSwitch:tintColor="#ff62cc2f" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1.0dip"
+                android:layout_alignParentBottom="true"
+                android:background="@color/line" />
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/_26sdp"
+                android:background="@color/titlename">
+
+
+            </RelativeLayout>
+
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1.0dip"
+                android:layout_alignParentBottom="true"
+                android:background="@color/line" />
+
+            <RelativeLayout
+                android:id="@+id/rll_activity_menu_setting_share"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_pressed_listitem">
+
+                <ImageView
+                    android:id="@+id/img_7"
+                    android:layout_width="@dimen/_30sdp"
+                    android:padding="@dimen/_2sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:src="@drawable/ic_sharefriend" />
+
+                <LinearLayout
+                    android:id="@+id/lnl_activity_menu_setting_share"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10.0dip"
+                    android:layout_toRightOf="@id/img_7"
+                    android:orientation="vertical"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="5dp">
+
+                    <com.abc.xyz.views.widgets.TextviewIPBold
+                        android:id="@+id/txv_activity_menu_setting_share"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/str_share"
+                        android:textColor="#000000"
+                        android:textSize="@dimen/_13sdp" />
+
+                    <com.abc.xyz.views.widgets.TextviewIPBold
+                        android:id="@+id/txv_activity_menu_setting_share2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:text="@string/str_title_share"
+                        android:textColor="#828282"
+                        android:textSize="@dimen/_11sdp" />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:src="@drawable/ic_chevron_right" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1.0dip"
+                    android:layout_alignLeft="@+id/lnl_activity_menu_setting_share"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/line" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rll_activity_menu_setting_rate"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_pressed_listitem">
+
+                <ImageView
+                    android:id="@+id/img_15"
+                    android:layout_width="@dimen/_30sdp"
+                    android:padding="@dimen/_2sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_rateus" />
+
+                <com.abc.xyz.views.widgets.TextviewIPBold
+                    android:id="@+id/txv_activity_menu_setting_rate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5.0dip"
+                    android:layout_marginLeft="10.0dip"
+                    android:layout_toRightOf="@id/img_15"
+                    android:paddingBottom="11dp"
+                    android:paddingTop="11dp"
+                    android:text="@string/str_rate"
+                    android:textColor="#000000"
+                    android:textSize="@dimen/_13sdp" />
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:src="@drawable/ic_chevron_right" />
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/banner_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:orientation="vertical" />
+</RelativeLayout>

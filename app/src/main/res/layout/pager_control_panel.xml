@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal">
+
+    <android.support.v7.widget.CardView  xmlns:android = "http://schemas.android.com/apk/res/android"
+        xmlns:card_view = "http://schemas.android.com/apk/res-auto"
+        android:id = "@+id/newsCardView"
+        android:layout_width = "@dimen/_280sdp"
+        android:layout_height = "@dimen/_280sdp"
+        card_view:cardBackgroundColor = "#3f2b608a"
+        card_view:cardCornerRadius = "@dimen/_10sdp" >
+        <ImageView
+            android:id="@+id/iv_bg_cardview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:src="@drawable/blur"
+            />
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_56sdp"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal">
+
+
+
+                <ImageView
+                    android:id="@+id/iv_pager_control_wifi"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_56sdp"
+                    android:layout_weight="1"
+                    android:padding="@dimen/_5sdp"
+                    android:src="@drawable/ic_wifi_checked" />
+
+                <ImageView
+                    android:id="@+id/iv_pager_control_bluetooth"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_56sdp"
+                    android:layout_weight="1"
+                    android:padding="@dimen/_5sdp"
+                    android:src="@drawable/ic_bluetooth_checked" />
+
+                <ImageView
+                    android:id="@+id/iv_pager_control_sound"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_56sdp"
+                    android:layout_weight="1"
+                    android:padding="@dimen/_5sdp"
+                    android:src="@drawable/ic_mute_normal" />
+
+                <ImageView
+                    android:id="@+id/iv_pager_control_rotate"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_56sdp"
+                    android:layout_weight="1"
+                    android:padding="@dimen/_5sdp"
+                    android:src="@drawable/ic_lock_rotate_normal" />
+                <ImageView
+                    android:id="@+id/iv_pager_control_flight"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_56sdp"
+                    android:layout_weight="1"
+                    android:padding="@dimen/_5sdp"
+                    android:src="@drawable/btn_setting" />
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="#82939393"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <SeekBar
+                    android:id="@+id/seek_pager_control_brightness"
+                    style="@style/SeekBarAppThemeColorize"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_toLeftOf="@+id/imageView2"
+                    android:layout_toRightOf="@+id/imageView1"
+                    android:progress="50" />
+
+                <ImageView
+                    android:id="@+id/imageView1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:padding="@dimen/_12sdp"
+                    android:src="@drawable/ic_brightness_sub" />
+
+                <ImageView
+                    android:id="@+id/imageView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:padding="@dimen/_12sdp"
+                    android:src="@drawable/ic_brightness_plus" />
+            </RelativeLayout>
+            <LinearLayout
+                android:layout_marginTop="@dimen/_20sdp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_56sdp">
+                <LinearLayout android:orientation="vertical"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:background="#6c6c6c"
+                    android:padding="@dimen/_1sdp"
+                    android:layout_height="match_parent">
+                    <LinearLayout
+
+                        android:background="@drawable/blur"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+                        <TextView
+                            android:id="@+id/tv_pager_control_ram"
+                            android:textColor="#6c6c6c"
+                            android:gravity="center"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="3"
+                            android:textSize="@dimen/_16sdp"
+                            android:text="25%"/>
+                        <TextView
+                            android:textColor="@android:color/white"
+                            android:textSize="@dimen/_12sdp"
+                            android:background="#736c6c6c"
+                            android:gravity="center"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1.3"
+                            android:text="RAM"/>
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:background="#6c6c6c"
+                    android:padding="@dimen/_1sdp"
+                    android:layout_height="match_parent">
+                    <LinearLayout
+                        android:background="@drawable/blur"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+                        <TextView
+                            android:id="@+id/tv_pager_control_memory"
+                            android:textColor="#6c6c6c"
+                            android:gravity="center"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="3"
+                            android:textSize="@dimen/_16sdp"
+                            android:text="25%"/>
+                        <TextView
+                            android:textColor="@android:color/white"
+                            android:textSize="@dimen/_12sdp"
+                            android:background="#736c6c6c"
+                            android:gravity="center"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1.3"
+                            android:text="MEMORY"/>
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:background="#6c6c6c"
+                    android:padding="@dimen/_1sdp"
+                    android:layout_height="match_parent">
+                    <LinearLayout
+                        android:background="@drawable/blur"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+                        <TextView
+                            android:id="@+id/tv_pager_control_cpu"
+                            android:textColor="#6c6c6c"
+                            android:gravity="center"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="3"
+                            android:textSize="@dimen/_16sdp"
+                            android:text="25%"/>
+                        <TextView
+                            android:textColor="@android:color/white"
+                            android:textSize="@dimen/_12sdp"
+                            android:background="#736c6c6c"
+                            android:gravity="center"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1.3"
+                            android:text="CPU"/>
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:background="#6c6c6c"
+                    android:padding="@dimen/_1sdp"
+                    android:layout_height="match_parent">
+                    <LinearLayout
+                        android:background="@drawable/blur"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+                        <TextView
+                            android:id="@+id/tv_pager_control_battery"
+                            android:textColor="#6c6c6c"
+                            android:gravity="center"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="3"
+                            android:textSize="@dimen/_16sdp"
+                            android:text="25%"/>
+                        <TextView
+                            android:textColor="@android:color/white"
+                            android:textSize="@dimen/_12sdp"
+                            android:background="#736c6c6c"
+                            android:gravity="center"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1.3"
+                            android:text="BATTERY"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/rll_partial_slideup__music"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/iv_pager_control_flash"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@android:color/transparent"
+                    android:padding="@dimen/_8sdp"
+                    android:src="@drawable/bg_btnslide_flash" />
+
+                <ImageView
+                    android:id="@+id/iv_pager_control_timer"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@android:color/transparent"
+                    android:padding="@dimen/_8sdp"
+                    android:src="@drawable/bg_btnslide_timer" />
+
+                <ImageView
+                    android:id="@+id/iv_pager_control_caculator"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@android:color/transparent"
+                    android:padding="@dimen/_8sdp"
+                    android:src="@drawable/bg_btnslide_calculator" />
+
+                <ImageView
+                    android:id="@+id/iv_pager_control_camera"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@android:color/transparent"
+                    android:padding="@dimen/_8sdp"
+                    android:src="@drawable/bg_btnslide_camera" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+</LinearLayout>

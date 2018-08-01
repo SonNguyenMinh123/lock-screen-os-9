@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/iv_activity_screen_lock_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"/>
+
+    <com.abc.xyz.views.widgets.BlurringView
+
+        android:id="@+id/iv_activity_screen_lock_bg_blur"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        app:blurRadius="24"
+        app:downsampleFactor="7"
+        app:overlayColor="#90000000"/>
+
+    <ImageView
+
+        android:id="@+id/iv_black"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#10000000"
+        android:scaleType="centerCrop"/>
+
+    <include
+        android:id="@+id/pager_lock_pass"
+        layout="@layout/pager_screen_lock_pass"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible"></include>
+
+    <com.abc.xyz.os10.views.ViewPager.MyViewPager
+        android:id="@+id/vp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></com.abc.xyz.os10.views.ViewPager.MyViewPager>
+
+    <me.relex.circleindicator.CircleIndicator
+        android:id="@+id/indicator"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="@dimen/_50sdp"
+        android:gravity="center"/>
+
+    <ImageView
+        android:id="@+id/bt_home_screen_lock_noemarl"
+        android:layout_width="@dimen/_40sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:src="@drawable/bt_home_screen_lock"/>
+</RelativeLayout>
