@@ -1,67 +1,41 @@
 apply plugin: 'com.android.application'
 
 android {
+    compileSdkVersion 24
+    buildToolsVersion "24.0.1"
 
-    compileSdkVersion 23
-    buildToolsVersion '23.0.1'
     defaultConfig {
-        applicationId 'com.abc.xyz'
-        minSdkVersion 15
+        applicationId "com.screen.videos"
+        minSdkVersion 19
         targetSdkVersion 22
-        versionCode 14
-        versionName '2.3'
-        renderscriptTargetApi 20
-        renderscriptSupportModeEnabled true
+        versionCode 4
+        versionName "1.3"
         multiDexEnabled true
-
+        setMultiDexEnabled(true)
     }
-
     buildTypes {
         release {
             minifyEnabled true
             proguardFiles 'proguard-android.txt', 'proguard-rules.pro'
         }
     }
-    productFlavors {
-    }
-
-    repositories {
-        mavenCentral() // jcenter() works as well because it pulls from Maven Central
-        maven { url "https://jitpack.io" }
-    }
-
-    dexOptions {
-        javaMaxHeapSize = "4g"
-    }
 }
-tasks.whenTaskAdded { task ->
-    if (task.name.equals("lint")) {
-        task.enabled = false
+buildscript {
+    repositories {
+        jcenter()
     }
 }
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
-    compile 'com.google.code.gson:gson:2.2.4'
-    compile 'com.android.support:appcompat-v7:23.2.1'
-    compile 'com.squareup.okhttp:okhttp:2.4.0'
-    compile project(':slidinguppanel')
-    compile project(':sweetdialog')
-    compile project(':libQuickActionBar')
-    compile 'com.nostra13.universalimageloader:universal-image-loader:1.9.5'
-    compile 'com.edmodo:cropper:2.0.0'
-    compile 'com.bigkoo:alertview:1.0.2'
+    testCompile 'junit:junit:4.12'
+    compile files('libs/RootTools-3.4.jar')
+    compile 'org.greenrobot:eventbus:3.0.0'
+    compile 'com.github.GrenderG:Prefs:1.1'
+    compile 'me.xiaopan:switchbutton:1.2.0'
     compile 'com.intuit.sdp:sdp-android:1.0.3'
-    compile 'com.nineoldandroids:library:2.4.0+'
-    compile 'org.jbundle.util.osgi.wrapped:org.jbundle.util.osgi.wrapped.org.apache.http.client:4.1.2'
-    // os 10
-    compile 'com.github.shts:TriangleLabelView:1.1.2'
-    compile 'me.relex:circleindicator:1.2.1@aar'
-    compile 'com.android.support:cardview-v7:23.2.1'
-    compile 'com.github.bumptech.glide:glide:3.7.0'
-    compile 'com.7heaven.ioswidget:iosswitch:0.6'
-    compile 'com.romainpiel.shimmer:library:1.4.0@aar'
-    compile 'jp.wasabeef:blurry:2.0.2'
-    // blur
     compile 'com.android.support:multidex:1.0.1'
-    compile files('libs/FBSDK_45.jar')
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+    compile 'com.android.support:appcompat-v7:24.2.1'
+    compile project(':sweetdialog')
+    compile files('libs/FBSDK_12_Android.jar')
 }

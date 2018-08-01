@@ -1,0 +1,148 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/white"
+                android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/txt_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50sdp"
+        android:background="#212121"
+        android:gravity="center"
+        android:text="Screen Recorder"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/_20sdp"/>
+
+    <Switch
+        android:id="@+id/sw_show_icon"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txt_title"
+        android:layout_marginLeft="@dimen/_20sdp"
+        android:layout_marginRight="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:background="@android:color/white"
+        android:text="Enable Recorder"
+        android:textColor="#3a3a3a"
+        android:textSize="@dimen/_20sdp"/>
+
+    <View
+        android:id="@+id/myRectangleView"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_1sdp"
+        android:layout_below="@id/sw_show_icon"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:background="@drawable/divider"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom"
+        android:gravity="bottom"
+        android:orientation="vertical">
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="15dp"/>
+
+        <Button
+            android:id="@+id/open_browser"
+            android:layout_width="@dimen/_250sdp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/bg_button_albums"
+            android:text="Album Recorder"
+            android:textColor="@android:color/white"/>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="15dp"/>
+
+        <ImageButton
+            android:id="@+id/btnPrivacy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/bg_button_privacy"/>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="15dp"/>
+
+        <ImageButton
+            android:id="@+id/btnRate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="@dimen/_20sdp"
+            android:background="@drawable/bg_button_rate"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_control_rooted"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/myRectangleView"
+        android:background="@android:color/white"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txt_title_duration"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:layout_marginLeft="@dimen/_20sdp"
+            android:gravity="left"
+            android:text="Duration"
+            android:textColor="#3a3a3a"
+            android:textSize="@dimen/_20sdp"/>
+
+        <LinearLayout
+            android:id="@+id/ll_set_duration"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <com.screen.videos.customview.pickernumber.NumberPicker
+                android:id="@+id/pickerMinute"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@android:color/white"
+                app:np_dividerColor="#a7a9ac"
+                app:np_dividerThickness="1dp"
+                app:np_formatter="@string/number_picker_formatter"
+                app:np_height="200dp"
+                app:np_max="20"
+                app:np_min="0"
+                app:np_textColor="#212121"
+                app:np_textSize="@dimen/_25sdp"
+                app:np_width="64dp"/>
+
+            <com.screen.videos.customview.pickernumber.NumberPicker2
+                android:id="@+id/pickerSeconds"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@android:color/white"
+                android:textAlignment="viewStart"
+                app:np_dividerColor="#a7a9ac"
+                app:np_dividerThickness="1dp"
+                app:np_formatter="@string/number_picker_formatter"
+                app:np_height="200dp"
+                app:np_max="59"
+                app:np_min="0"
+                app:np_textColor="#212121"
+                app:np_textSize="@dimen/_25sdp"
+                app:np_width="64dp"/>
+        </LinearLayout>
+
+    </LinearLayout>
+</RelativeLayout>

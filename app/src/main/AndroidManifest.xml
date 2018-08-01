@@ -1,151 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.abc.xyz">
-
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.READ_CALL_LOG" />
-    <uses-permission android:name="android.permission.VIBRATE" />
-    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
-    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
-    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
-    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-
-    <uses-feature android:name="android.hardware.camera" />
-    <uses-feature android:name="android.hardware.camera.autofocus" />
-
-    <uses-permission android:name="android.permission.WAKE_LOCK" />
-
-    <uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS" />
-    <uses-permission android:name="android.permission.RECEIVE_SMS" />
-    <uses-permission android:name="android.permission.READ_CONTACTS" />
-    <uses-permission android:name="android.permission.READ_LOGS" />
-
-    <!--brightness-->
-    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
-    <!--run Alarm-->
-    <uses-permission android:name="com.android.alarm.permission.SET_ALARM" />
-
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.INTERNET" />
+    package="com.screen.videos">
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <uses-permission android:name="android.permission.ACCESS_SUPERUSER" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
-
-    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
-    <uses-permission android:name="android.permission.BLUETOOTH" />
-    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
-    <uses-permission android:name="android.permission.CAMERA" />
-    <!--<uses-permission android:name="com.google.android.c2dm.permission.RECEIVE"/>-->
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
     <uses-permission android:name="android.permission.GET_TASKS" />
-
     <application
-        android:name="android.support.multidex.MultiDexApplication"
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/icon512"
         android:label="@string/app_name"
-        android:largeHeap="true"
+        android:supportsRtl="true"
+        android:name="com.screen.videos.application.MyApplication"
         android:theme="@style/AppTheme">
-
-        <meta-data
-            android:name="applovin.sdk.key"
-            android:value="1xDh8TmJTQvJGIumKc2Nk9Sq8Q9Mn_4owHT3mDMIeGcwTVft6hFqsid-7oLvnPghh9lSN6l0NMxxsaoyH2n8mP" />
-
-        <activity
-            android:name="com.abc.xyz.screens.MenuSettingActivity"
-            android:label="@string/app_name"
-            android:screenOrientation="portrait">
+        <activity android:name="com.screen.videos.screens.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <activity
-            android:name="com.abc.xyz.screens.CroperActivity"
-            android:screenOrientation="portrait" />
-
-        <receiver android:name="com.abc.xyz.receivers.ScreenOffReceiver">
+        <activity android:name=".screens.VideoActivity"/>
+        <service android:name=".customview.floating.service.CustomFloatingViewService"/>
+        <service android:name=".service.Recorder"/>
+        <receiver android:name=".receiver.NotificationReceiver">
             <intent-filter>
-                <action android:name="android.intent.action.SCREEN_OFF" />
-                <action android:name="android.intent.action.SCREEN_ON" />
-                <action android:name="android.intent.action.BOOT_COMPLETED" />
-                <action android:name="android.intent.action.QUICKBOOT_POWERON" />
+                <action android:name="YES_ACTION"/>
             </intent-filter>
         </receiver>
-
-        <receiver android:name="com.abc.xyz.receivers.MessagerReceiver">
-            <intent-filter>
-                <action android:name="android.provider.Telephony.SMS_RECEIVED" />
-            </intent-filter>
-        </receiver>
-        <receiver android:name="com.abc.xyz.receivers.VolumnChangingReceiver">
-            <intent-filter>
-                <action android:name="android.media.VOLUME_CHANGED_ACTION" />
-            </intent-filter>
-        </receiver>
-
-        <intent-filter>
-            <action android:name="android.provider.Telephony.SMS_RECEIVED" />
-        </intent-filter>
-
-        <service android:name="com.abc.xyz.services.lockscreenios9.RegisterReceiverService"></service>
-        <service android:name="com.abc.xyz.services.lockscreenios9.MusicPlayerService" />
-        <service
-            android:name="com.abc.xyz.services.lockscreenios9.LockScreen9ViewService"
-            android:exported="true"></service>
-        <service
-            android:name="com.abc.xyz.services.lockscreenios10.LockScreen10ViewService"
-            android:exported="true"></service>
-
-        <receiver android:name="com.abc.xyz.receivers.IncomingCallReceiver">
-            <intent-filter>
-                <action android:name="android.intent.action.PHONE_STATE" />
-                <action android:name="android.intent.action.NEW_OUTGOING_CALL" />
-            </intent-filter>
-        </receiver>
-
-        <activity
-            android:name="com.abc.xyz.screens.PassCodeFirstActivity"
-            android:label="@string/title_activity_set_pass_code"
-            android:screenOrientation="portrait"></activity>
-
-        <activity
-            android:name="com.abc.xyz.screens.ActionControlLockActivity"
-            android:screenOrientation="portrait"></activity>
-        <activity
-            android:name="com.abc.xyz.screens.QuestionPasscodeActivity"
-            android:label="@string/title_activity_question_passcode"
-            android:screenOrientation="portrait"></activity>
-        <activity
-            android:name="com.abc.xyz.screens.QuestionChangepinActivity"
-            android:label="@string/title_activity_question_changepin"
-            android:screenOrientation="portrait"></activity>
-        <activity
-            android:name="com.abc.xyz.screens.WallpaperListActivity"
-            android:label="@string/title_activity_wallpaper"
-            android:screenOrientation="portrait"></activity>
-        <activity
-            android:name="com.abc.xyz.screens.PasscodeSecondActivity"
-            android:label="@string/title_activity_set_cpasscode"
-            android:screenOrientation="portrait"></activity>
-        <activity
-            android:name="com.abc.xyz.screens.LockerActivity"
-            android:label="@string/title_activity_lock_screen"
-            android:launchMode="singleTop"
-            android:screenOrientation="portrait"
-            android:theme="@style/LockscreenTheme"></activity>
-        <activity
-            android:name="com.abc.xyz.screens.WallpaperSelectionActivity"
-            android:label="@string/title_activity_select_wallpaper"
-            android:screenOrientation="portrait"></activity>
-        <activity
-            android:name="com.abc.xyz.screens.WeatherSettingActivity"
-            android:screenOrientation="portrait" />
-        <!--OS 10-->
-        <activity android:name=".os10.screens.PhoneActivity"></activity>
 
         <activity
             android:name="com.facebook.ads.AudienceNetworkActivity"
@@ -185,7 +71,7 @@
         <receiver
             android:name="com.startapp.android.publish.common.metaData.BootCompleteListener"
             android:enabled="true"
-            android:permission="android.permission.RECEIVE_BOOT_COMPLETED">
+            android:permission="android.permission.RECEIVE_BOOT_COMPLETED" >
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
 
@@ -209,11 +95,5 @@
             android:label=""
             android:noHistory="true"
             android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
-
-        <activity android:name="com.applovin.adview.AppLovinInterstitialActivity" />
-        <activity android:name="com.applovin.adview.AppLovinConfirmationActivity" />
-
-
     </application>
-
 </manifest>

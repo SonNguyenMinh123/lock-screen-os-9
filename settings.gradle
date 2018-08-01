@@ -1,1 +1,1 @@
-include ':slidinguppanel', ':libQuickActionBar', ':app', ':sweetdialog'
+include ':app', ':sweetdialog', ':ratedialog'

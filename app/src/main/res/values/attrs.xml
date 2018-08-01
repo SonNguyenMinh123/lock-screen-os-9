@@ -1,58 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <declare-styleable name="ShimmerView">
-        <attr name="reflectionColor" format="color"/>
-    </declare-styleable>
-    <declare-styleable name="ProgressWheel">
-        <attr name="progressIndeterminate" format="boolean"/>
-        <attr name="barColor" format="color"/>
-        <attr name="rimColor" format="color"/>
-        <attr name="rimWidth" format="dimension"/>
-        <attr name="spinSpeed" format="float"/>
-        <attr name="barSpinCycleTime" format="integer"/>
-        <attr name="circleRadius" format="dimension"/>
-        <attr name="fillRadius" format="boolean"/>
-        <attr name="barWidth" format="dimension"/>
-        <attr name="linearProgress" format="boolean"/>
+
+    <declare-styleable name="CustomRangeNumberEditText">
+        <attr name="maxDouble" format="float"/>
+        <attr name="minDouble" format="float"/>
     </declare-styleable>
 
-    <declare-styleable name="KeypadItemLayout">
-        <attr name="textNum" format="string" />
-        <attr name="textchar" format="string" />
-    </declare-styleable>
-    <declare-styleable name="PxBlurringView">
-        <attr name="blurRadius" format="integer"/>
-        <attr name="downsampleFactor" format="integer"/>
-        <attr name="overlayColor" format="color"/>
+    <attr name="numberPickerStyle" format="reference" />
+
+    <declare-styleable name="NumberPicker">
+        <attr name="np_width" format="dimension" />
+        <attr name="np_height" format="dimension" />
+        <attr name="np_dividerColor" format="color" />
+        <attr name="np_dividerDistance" format="dimension" />
+        <attr name="np_dividerThickness" format="dimension" />
+        <attr name="np_formatter" format="string" />
+        <attr name="np_max" format="integer" />
+        <attr name="np_min" format="integer" />
+        <attr name="np_orientation" format="enum">
+            <enum name="horizontal" value="0" />
+            <enum name="vertical" value="1" />
+        </attr>
+        <attr name="np_textColor" format="color" />
+        <attr name="np_textSize" format="dimension" />
+        <attr name="np_typeface" format="string" />
+        <attr name="np_wheel_item_count" format="integer" />
     </declare-styleable>
 
-    <declare-styleable name="SwipeListView">
-        <attr name="swipeOpenOnLongPress" format="boolean"/>
-        <attr name="swipeAnimationTime" format="integer"/>
-        <attr name="swipeOffsetLeft" format="dimension"/>
-        <attr name="swipeOffsetRight" format="dimension"/>
-        <attr name="swipeCloseAllItemsWhenMoveList" format="boolean"/>
-        <attr name="swipeFrontView" format="reference"/>
-        <attr name="swipeBackView" format="reference"/>
-        <attr name="swipeMode" format="enum">
-            <enum name="none" value="0"/>
-            <enum name="both" value="1"/>
-            <enum name="right" value="2"/>
-            <enum name="left" value="3"/>
-        </attr>
-        <attr name="swipeActionLeft" format="enum">
-            <enum name="reveal" value="0"/>
-            <enum name="dismiss" value="1"/>
-            <enum name="choice" value="2"/>
-        </attr>
-        <attr name="swipeActionRight" format="enum">
-            <enum name="reveal" value="0"/>
-            <enum name="dismiss" value="1"/>
-            <enum name="choice" value="2"/>
-        </attr>
-        <attr name="swipeDrawableChecked" format="reference"/>
-        <attr name="swipeDrawableUnchecked" format="reference"/>
-    </declare-styleable>
-
-    <!---->
 </resources>
